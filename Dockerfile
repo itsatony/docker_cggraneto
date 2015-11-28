@@ -13,6 +13,8 @@
 
 FROM itsatony/nodejs-service-base
 
+RUN apt-get install -y wget curl
+
 ENV PORT=10080
 
 RUN mkdir /root/cgg_raneto
