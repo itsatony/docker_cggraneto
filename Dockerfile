@@ -19,16 +19,16 @@ ENV PORT=10080
 
 RUN mkdir /root/cgg_raneto
 
-WORKDIR /root/cgg_raneto
+RUN cd /root/cgg_raneto && wget https://github.com/gilbitron/Raneto/archive/0.7.1.tar.gz
 
-RUN wget https://github.com/gilbitron/Raneto/archive/0.7.1.tar.gz
+RUN cd /root/cgg_raneto && tar xfz 0.7.1.tar.gz
 
-RUN tar xfz 0.7.1.tar.gz
+WORKDIR /root/cgg_raneto/Raneto-0.7.1
 
 RUN npm install
 
-ADD . /root/cgg_raneto
+ADD . /root/cgg_raneto/Raneto-0.7.1
 
 EXPOSE      10080
 
-CMD [ "/root/cgg_raneto/entrypoint.sh" ]
+CMD [ "/root/cgg_raneto/Raneto-0.7.1/entrypoint.sh" ]
