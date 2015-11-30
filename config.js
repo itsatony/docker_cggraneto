@@ -8,7 +8,7 @@ module.exports = {
   site_title: 'cheerGG Wiki',
 
   // The base URL of your site (can use %base_url% in Markdown files)
-  base_url: 'wiki.cheergg.com',
+  base_url: '',
 
   // Used for the "Get in touch" page footer link
   support_email: 'admin@cheergg.com',
